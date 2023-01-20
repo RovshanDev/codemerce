@@ -7,6 +7,7 @@ class Blog extends CI_Controller {
         parent::__construct();
 
         $this->load->model('Blog_model','bg_md');
+        $this->load->model('Categories_model','cat_md');
 
     }
 
@@ -16,6 +17,10 @@ class Blog extends CI_Controller {
 
         $blog = new Blog_model();
 
+        $categories = new Categories_model();
+
+        $data['categories'] = $categories->select_all();
+
         $data['lists'] = $blog->select_all();
 
         $this->load->admin('blog/index',$data);
@@ -23,27 +28,48 @@ class Blog extends CI_Controller {
 
     public function create(){
 
-        if($this->input->post()){
+        if($this->input->post()) {
 
-            $request_data = [
-                'title' => $this->security->xss_clean($this->input->post('title')),
-                'description' => $this->security->xss_clean($this->input->post('description')),
-                'content' => $this->security->xss_clean($this->input->post('content')),
-                'image' => $this->security->xss_clean($this->input->file('image')),
-                'video' => $this->security->xss_clean($this->input->file('video')),
-                'is_monset' => $this->security->xss_clean($this->input->post('is_menu')),
-                'status' => $this->security->xss_clean($this->input->post('status')),
-                'created_at' => date("Y-m-d H:i:s")
+            $new_name = time() . '' . rand(1, 10000);
+            $config = [
+                'upload_path' => './uploads/',
+                'allowed_types' => 'gif|jpg|png|jpeg',
+                'file_name' => $new_name
             ];
-            $insert_id = $this->bg_md->insert($request_data);
+            $this->load->library('upload', $config);
 
-            if($insert_id > 0){
-                $this->session->set_flashdata('success_message','Məlumat uğurla əlavə edildi');
+            if (!$this->upload->do_upload('image')) {
+                $error = array('error' => $this->upload->display_errors());
+//                $this->load->view('upload_form', $error);
+            } else {
+                $image_file = $this->upload->data('file_name');
 
-                redirect('backend/blog');
+                $request_data = [
+                    'title' => $this->security->xss_clean($this->input->post('title')),
+                    'description' => $this->security->xss_clean($this->input->post('description')),
+                    'content' => $this->security->xss_clean($this->input->post('content')),
+                    'image' => $image_file,
+//                'video' => $this->security->xss_clean($this->input->file('video')),
+                    'cat_id' => $this->security->xss_clean($this->input->post('cat_id')),
+                    'is_monset' => $this->security->xss_clean($this->input->post('is_monset')),
+                    'status' => $this->security->xss_clean($this->input->post('status')),
+                    'created_at' => date("Y-m-d H:i:s")
+                ];
+//                print_r($request_data);
+                $insert_id = $this->bg_md->insert($request_data);
+
+                if ($insert_id > 0) {
+                    $this->session->set_flashdata('success_message', 'Məlumat uğurla əlavə edildi');
+
+                    redirect('backend/blog');
+                }
+
             }
-
         }
+
+        $categories = new Categories_model();
+
+        $data['categories'] = $categories->select_all();
 
         $data['title'] = 'Blog List';
 
@@ -60,9 +86,10 @@ class Blog extends CI_Controller {
                 'title' => $this->security->xss_clean($this->input->post('title')),
                 'description' => $this->security->xss_clean($this->input->post('description')),
                 'content' => $this->security->xss_clean($this->input->post('content')),
-                'image' => $this->security->xss_clean($this->input->file('image')),
-                'video' => $this->security->xss_clean($this->input->file('video')),
-                'is_monset' => $this->security->xss_clean($this->input->post('is_menu')),
+//                'image' => $this->security->xss_clean($this->input->file('image')),
+//                'video' => $this->security->xss_clean($this->input->file('video')),
+                'cat_id' => $this->security->xss_clean($this->input->post('cat_id')),
+                'is_monset' => $this->security->xss_clean($this->input->post('is_monset')),
                 'status' => $this->security->xss_clean($this->input->post('status')),
             ];
 
@@ -83,6 +110,10 @@ class Blog extends CI_Controller {
 
             redirect('backend/blog');
         }
+
+        $categories = new Categories_model();
+
+        $data['categories'] = $categories->select_all();
 
         $data['item'] = $item;
 

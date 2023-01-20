@@ -12,6 +12,7 @@ class Migration_Add_order_status extends CI_Migration
             'id' => array(
                 'type' => 'INT',
                 'constraint' => 10,
+                'auto_increment' => TRUE
             ),
             'title' => array(
                 'type' => 'varchar',

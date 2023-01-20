@@ -41,7 +41,7 @@ class Brands extends CI_Controller {
             else
             {
                 $brand_file = $this->upload->data('file_name');
-                print_r($brand_file);
+//                print_r($brand_file);
                 $request_data = [
                     'title' => $this->security->xss_clean($this->input->post('title')),
                     'status' => $this->security->xss_clean($this->input->post('status')),

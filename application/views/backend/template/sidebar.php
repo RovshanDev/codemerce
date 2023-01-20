@@ -33,14 +33,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url('backend/pages'); ?>" class="nav-link">
-                        <i class="nav-icon fas fa-folder-open"></i>
-                        <p>
-                            Pages
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="<?= base_url('backend/brands'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-folder-open"></i>
                         <p>
@@ -49,15 +41,79 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?route=oop" class="nav-link">
+                    <a href="<?= base_url('backend/products'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-folder-open"></i>
                         <p>
-                            Oop
+                            Products
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?route=blogs" class="nav-link">
+                    <a href="<?= base_url('backend/users'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Users
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/delivery_methods'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Delivery Methods
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/payment_methods'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Payment Methods
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/order_status'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Order Status
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/orders'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Orders
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/images'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Images
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/category'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Category
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/pages'); ?>" class="nav-link">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Pages
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('backend/blog'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-desktop"></i>
                         <p>
                             Blog
@@ -65,7 +121,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?route=categories" class="nav-link">
+                    <a href="<?= base_url('backend/categories'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-list-ul"></i>
                         <p>
                             Categories
@@ -73,7 +129,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?route=settings" class="nav-link">
+                    <a href="<?= base_url('backend/settings'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Settings

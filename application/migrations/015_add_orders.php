@@ -32,7 +32,7 @@ class Migration_Add_orders extends CI_Migration
                 'default' => 0.00,
             ),
             'payment_json' => array(
-                'type' => 'JSON',
+                'type' => 'TEXT',
             ),
             'status_id' => array(
                 'type' => 'INT',

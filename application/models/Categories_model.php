@@ -22,7 +22,6 @@ class Categories_model extends CI_Model {
     }
 
     public function select_all(){
-        $this->db->where('status',1);
         $query = $this->db->get($this->table);
 
         return $query->result();

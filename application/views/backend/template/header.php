@@ -49,7 +49,7 @@
                 <li class="nav-item dropdown">
 
                     <!--                //logout-->
-                    <a class="nav-link" href="logout.php">
+                    <a class="nav-link" href="<?= base_url('backend/logout'); ?>">
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
                     <!--                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">-->

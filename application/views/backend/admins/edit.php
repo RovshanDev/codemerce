@@ -7,7 +7,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action="<?= base_url('backend/admins/edit/'.$item->id); ?>" method="post">
+                <form action="<?= base_url('backend/users/edit/'.$item->id); ?>" method="post">
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">FullName</label>

@@ -7,6 +7,7 @@ class Blog_model extends CI_Model {
     public $content ;
     public $image;
     public $video;
+    public $cat_id;
     public $is_monset ;
     public $status ;
     public $created_at;

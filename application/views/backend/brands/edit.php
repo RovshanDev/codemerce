@@ -16,7 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label for="logo">logo</label>
-                            <img width="150" height="100" src=uploads/<?=$item->logo;?>>
+                            <img width="150" height="100" src="<?php echo base_url('uploads/') . $item->logo ?>">
                             <input type="file" name="logo" class="form-control" value="<?= $item->logo; ?>" placeholder="Enter is_menu">
                         </div>
                         <div class="form-group">

@@ -55,6 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['backend'] = 'backend/Dashboard/index';
+$route['backend/login'] = 'backend/Login/index';
+$route['backend/logout'] = 'backend/Login/logout';
+$route['frontend'] = 'frontend/Home/index';
 
 $route['backend/admins'] = 'backend/Admins/index';
 $route['backend/admins/create'] = 'backend/Admins/create';
@@ -85,3 +88,68 @@ $route['backend/brands'] = 'backend/Brands/index';
 $route['backend/brands/create'] = 'backend/Brands/create';
 $route['backend/brands/edit/(:num)'] = 'backend/Brands/edit/$1';
 $route['backend/brands/delete/(:num)'] = 'backend/Brands/delete/$1';
+
+$route['backend/products'] = 'backend/Products/index';
+$route['backend/products/create'] = 'backend/Products/create';
+$route['backend/products/edit/(:num)'] = 'backend/Products/edit/$1';
+$route['backend/products/delete/(:num)'] = 'backend/Products/delete/$1';
+
+$route['backend/users'] = 'backend/Users/index';
+$route['backend/users/create'] = 'backend/Users/create';
+$route['backend/users/edit/(:num)'] = 'backend/Users/edit/$1';
+$route['backend/users/delete/(:num)'] = 'backend/Users/delete/$1';
+
+$route['backend/delivery_methods'] = 'backend/DeliveryMethods/index';
+$route['backend/delivery_methods/create'] = 'backend/DeliveryMethods/create';
+$route['backend/delivery_methods/edit/(:num)'] = 'backend/DeliveryMethods/edit/$1';
+$route['backend/delivery_methods/delete/(:num)'] = 'backend/DeliveryMethods/delete/$1';
+
+$route['backend/payment_methods'] = 'backend/PaymentMethods/index';
+$route['backend/payment_methods/create'] = 'backend/PaymentMethods/create';
+$route['backend/payment_methods/edit/(:num)'] = 'backend/PaymentMethods/edit/$1';
+$route['backend/payment_methods/delete/(:num)'] = 'backend/PaymentMethods/delete/$1';
+
+$route['backend/order_status'] = 'backend/OrderStatus/index';
+$route['backend/order_status/create'] = 'backend/OrderStatus/create';
+$route['backend/order_status/edit/(:num)'] = 'backend/OrderStatus/edit/$1';
+$route['backend/order_status/delete/(:num)'] = 'backend/OrderStatus/delete/$1';
+
+$route['backend/orders'] = 'backend/Orders/index';
+$route['backend/orders/create'] = 'backend/Orders/create';
+$route['backend/orders/edit/(:num)'] = 'backend/Orders/edit/$1';
+$route['backend/orders/delete/(:num)'] = 'backend/Orders/delete/$1';
+
+$route['backend/images'] = 'backend/Images/index';
+$route['backend/images/create'] = 'backend/Images/create';
+$route['backend/images/edit/(:num)'] = 'backend/Images/edit/$1';
+$route['backend/images/delete/(:num)'] = 'backend/Images/delete/$1';
+
+$route['backend/category'] = 'backend/Category/index';
+$route['backend/category/create'] = 'backend/Category/create';
+$route['backend/category/edit/(:num)'] = 'backend/Category/edit/$1';
+$route['backend/category/delete/(:num)'] = 'backend/Category/delete/$1';
+
+$route['backend/blog'] = 'backend/Blog/index';
+$route['backend/blog/create'] = 'backend/Blog/create';
+$route['backend/blog/edit/(:num)'] = 'backend/Blog/edit/$1';
+$route['backend/blog/delete/(:num)'] = 'backend/Blog/delete/$1';
+
+$route['frontend/about_us'] = 'frontend/AboutUs/index';
+$route['frontend/banner_effect'] = 'frontend/BannerEffect/index';
+$route['frontend/blog_detail'] = 'frontend/BlogDetail/index';
+$route['frontend/blog_page'] = 'frontend/BlogPage/index';
+$route['frontend/cart'] = 'frontend/Cart/index';
+$route['category/(:any)'] = 'front/Category/index/$1';
+$route['frontend/checkout'] = 'frontend/Checkout/index';
+$route['frontend/compare'] = 'frontend/Compare/index';
+$route['frontend/contact'] = 'frontend/Contact/index';
+$route['frontend/faq'] = 'frontend/Faq/index';
+$route['frontend/login'] = 'frontend/Login/index';
+$route['frontend/my_account'] = 'frontend/MyAccount/index';
+$route['frontend/order_history'] = 'frontend/OrderHistory/index';
+$route['frontend/order_information'] = 'frontend/OrderInformation/index';
+$route['frontend/product/(:num)'] = 'frontend/Product/index/$1';
+$route['frontend/quickview'] = 'frontend/QuickView/index';
+$route['frontend/register'] = 'frontend/Register/index';
+$route['frontend/returns'] = 'frontend/Returns/index';
+$route['frontend/wishlist'] = 'frontend/Wishlist/index';
