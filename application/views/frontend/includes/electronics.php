@@ -51,7 +51,6 @@
                                                     <a href="<?=base_url('frontend/category')?>" title="<?= $row['title'] ?>" target="_self">
                                                         <i class="fa fa-caret-right"></i><?= $row['title'] ?></a>
                                                     <?php endforeach;
-                                                    break;
                                                     endif;
                                                     endforeach; ?>
                                                 </div>
