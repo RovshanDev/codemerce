@@ -24,11 +24,20 @@ class Images_model extends CI_Model {
         return $this->db->insert_id();
     }
 
-    public function select_all(){
+    public function select_all()
+    {
         $query = $this->db->get($this->table);
 
         return $query->result();
     }
+    public function select_main()
+    {   $this->db->where('main',1);
+        $query = $this->db->get($this->table);
+
+        return $query->result();
+    }
+
+
 
     public function selectDataById($id){
         $this->db->where('id',$id);

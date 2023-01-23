@@ -20,6 +20,16 @@ class Category_model extends CI_Model {
         return $query;
 
     }
+    public function product_categories_insert($data1,$data2){
+         $data = array(
+                 'products_id' => $data1,
+                 'categories_id' => $data2
+         );
+
+        $this->db->insert('product_categories', $data);
+        return $this->db->insert_id();
+
+    }
 
     public function insert($data){
         // $data = array(

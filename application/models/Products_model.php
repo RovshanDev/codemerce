@@ -25,6 +25,8 @@ class Products_model extends CI_Model {
 
     }
 
+
+
     public function insert($data){
         // $data = array(
         //         'fullname' => $this->fullname,

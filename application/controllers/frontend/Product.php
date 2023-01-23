@@ -17,10 +17,12 @@ class Product extends CI_Controller {
         $data['title'] = 'Product';
         $products = new Products_model();
         $data['lists'] = $products->join();
+        $data['product'] = $products->selectDataById($id);
 
         $images = new Images_model();
         $data['images'] = $images->select_all();
         $data['item'] = $images->getId($id);
+
 
         $brands = new Brands_model();
         $data['brands'] = $brands->select_all();

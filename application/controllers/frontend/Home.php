@@ -18,7 +18,9 @@ class Home extends CI_Controller {
         $data['lists'] = $products->select_all();
 
         $images = new Images_model();
-        $data['images'] = $images->select_all();
+//        $data['images'] = $images->select_all();
+        $data['images'] = $images->select_main();
+
 
 
         $categories = new Category_model();

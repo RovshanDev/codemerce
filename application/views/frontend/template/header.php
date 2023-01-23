@@ -138,41 +138,18 @@
                                             <div class="container">
                                                 <ul class="megamenu " data-transition="slide" data-animationtime="250">
                                                     <li class="home hover">
-                                                        <a href="<?=base_url('frontend')?>">Home <b class="caret"></b></a>
-                                                    </li>
-                                                    <li class="with-sub-menu hover">
-                                                        <p class="close-menu"></p>
-                                                        <a href="#" class="clearfix">
-                                                            <strong>
-
-                                                                All Categories
-                                                            </strong>
-
-                                                            <b class="caret"></b>
-                                                        </a>
+                                                        <a href="<?=base_url('frontend')?>">Home</a>
                                                     </li>
                                                     <li class="with-sub-menu hover">
                                                         <p class="close-menu"></p>
                                                         <a href="<?=base_url('frontend/about_us')?>" class="clearfix">
-                                                            <strong><img class="lazyload" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?=base_url()?>assets/frontend/image/demo/menu/hot-icon.png" alt="">About Us</strong>
-                                                            <b class="caret"></b>
+                                                            <strong>About Us</strong>
                                                         </a>
                                                     </li>
                                                     <li class="with-sub-menu hover">
                                                         <p class="close-menu"></p>
-                                                        <a href="#" class="clearfix">
-                                                            <strong><img class="lazyload" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?=base_url()?>assets/frontend/image/demo/menu/new-icon.png" alt="">Categories</strong>
-                                                            <span class="label"></span>
-                                                            <b class="caret"></b>
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="with-sub-menu hover">
-                                                        <p class="close-menu"></p>
-                                                        <a href="#" class="clearfix">
-                                                            <strong>Accessories</strong>
-
-                                                            <b class="caret"></b>
+                                                        <a href="<?=base_url('frontend/category')?>" class="clearfix">
+                                                            <strong>Categories</strong>
                                                         </a>
                                                     </li>
                                                     <li class="">
@@ -180,14 +157,6 @@
                                                         <a href="<?= base_url('frontend/blog_page')?>" class="clearfix">
                                                             <strong>Blog</strong>
                                                             <span class="label"></span>
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="hidden-md color-buy">
-                                                        <p class="close-menu"></p>
-                                                        <a href="#" class="clearfix">
-                                                            <strong>Buy Theme!</strong>
-
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -243,7 +212,7 @@
                                                             <?php foreach ($categories as $key => $value): ?>
                                                                 <li class="item-vertical css-menu with-sub-menu hover">
                                                                     <p class="close-menu"></p>
-                                                                    <a href="#" class="clearfix">
+                                                                    <a href="<?= base_url('frontend/category/' . $value['id']); ?>" class="clearfix">
                                                                         <strong>
                                                                             <span><?= $value['title'] ?></span>
                                                                             <?php if (!empty($value['childs'])): ?>
@@ -261,20 +230,20 @@
                                                                                                 <div class="menu">
                                                                                                     <ul>
                                                                                                         <?php foreach ($value['childs'] as $row): ?>
-                                                                                                        <li><a href="#" class="main-menu"><?= $row['title'] ?>
+                                                                                                        <li><a href="<?= base_url('frontend/category/' . $row['id']); ?>" class="main-menu"><?= $row['title'] ?>
                                                                                                                 <?php if (!empty($row['childs'])): ?>
                                                                                                                     <b class="fa fa-angle-right"></b>
                                                                                                                 <?php endif; ?>
                                                                                                             </a>
-                                                                                                            <?php endforeach; ?>
-                                                                                                            <ul>
+                                                                                                               <ul>
                                                                                                                 <?php foreach ($row['childs'] as $last):?>
                                                                                                                     <li>
-                                                                                                                        <a href="#"><?= $last['title'] ?></a>
+                                                                                                                        <a href="<?= base_url('frontend/category/' . $last['id']); ?>"><?= $last['title'] ?></a>
                                                                                                                     </li>
                                                                                                                 <?php endforeach; ?>
-                                                                                                            </ul>
+                                                                                                               </ul>
                                                                                                         </li>
+                                                                                                        <?php endforeach; ?>
                                                                                                     </ul>
 
                                                                                                 </div>

@@ -91,70 +91,7 @@
 
                                 <!-- - - - - - - - - - - - - - Price - - - - - - - - - - - - - - - - -->
 
-                                <div class="table_cell">
-
-                                    <fieldset>
-
-                                        <legend>Color</legend>
-
-                                        <div class="row">
-
-                                            <div class="col-sm-6">
-
-                                                <ul class="simple_vertical_list">
-
-                                                    <li>
-
-                                                        <input type="checkbox" name="" id="color_btn_1">
-                                                        <label for="color_btn_1" class="color_btn green">Green</label>
-
-                                                    </li>
-
-                                                    <li>
-
-                                                        <input type="checkbox" name="" id="color_btn_2">
-                                                        <label for="color_btn_2" class="color_btn yellow">Yellow</label>
-
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="" id="color_btn_3">
-                                                        <label for="color_btn_3" class="color_btn red">Red</label>
-
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-
-                                            <div class="col-sm-6">
-
-                                                <ul class="simple_vertical_list">
-
-                                                    <li>
-                                                        <input type="checkbox" name="" id="color_btn_4">
-                                                        <label for="color_btn_4" class="color_btn blue">Blue</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="" id="color_btn_5">
-                                                        <label for="color_btn_5" class="color_btn grey">Grey</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="" id="color_btn_6">
-                                                        <label for="color_btn_6" class="color_btn orange">Orange</label>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-
-                                        </div>
-
-                                    </fieldset>
-
-                                </div><!--/ .table_cell -->
+                                <!--/ .table_cell -->
 
                                 <!-- - - - - - - - - - - - - - End price - - - - - - - - - - - - - - - - -->
 
@@ -269,31 +206,11 @@
         <!--Middle Part Start-->
         <div id="content" class="col-md-9 col-sm-8">
             <div class="products-category">
-                <div class="category-derc form-group">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <p><img src="image/demo/shop/category/electronic-cat.png" alt="Apple Cinema 30&quot;"><br></p>
-                            <p>Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Vestibulum sed ante. Donec sagittis euismod purus. Sed ut perspiciatis sit voluptatem accusantim doloremque laudantim.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--- Subcategories - -->
                 <div class="refine-search form-group">
                     <div class="row">
                         <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
                             <a href="#" class="thumbnail"><img src="image/demo/shop/product/m2.jpg" alt="Car Alarms and Security"></a> <a href="#">Car Alarms and Security</a>
-                        </div>
-                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
-                            <a href="#" class="thumbnail"><img src="image/demo/shop/product/e2.jpg" alt="Car Audio &amp; Speakers"></a> <a href="#">Car Audio &amp; Speakers</a>
-                        </div>
-                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
-                            <a href="#" class="thumbnail"><img src="image/demo/shop/product/10.jpg" alt="Gadgets &amp; Auto Parts">	</a> <a href="#">Gadgets &amp; Auto Parts</a>
-                        </div>
-                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
-                            <a href="#" class="thumbnail"><img src="image/demo/shop/product/18.jpg" alt="More Car Accessories">	</a> <a href="#">More Car Accessories</a>
-                        </div>
-                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
-                            <a href="#" class="thumbnail"><img src="image/demo/shop/product/19.jpg" alt="More Car Accessories">	</a> <a href="#">More Car Accessories</a>
                         </div>
                     </div>
                 </div>

@@ -70,49 +70,10 @@
                         <div class="spcat-items-container products-list grid show-pre show-row"><!--Begin Items-->
                             <div class="spcat-items spcat-items-loaded items-category-sales product-layout spcat-items-selected" data-total="9">
                                 <div class="spcat-items-inner spcat00-4 spcat01-4 spcat02-3 spcat03-2 spcat04-1 flip">
-                                    <?php foreach ($lists as $list) : ?>
+
                                     <div class="ltabs-items-inner ltabs-slider ">
-                                        <div class="ltabs-item ">
-                                            <div class="item-inner product-thumb product-item-container transition ">
-                                                <div class="left-block">
-                                                    <div class="product-image-container">
-                                                        <div class="image">
-                                                            <a class="lt-image" href="product.html" target="_self" title="Verty nolen max..">
-                                                                <img  class="lazyload img-1 img-responsive" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="image/demo/shop/product/b6.jpg" alt="Apple Cinema 30" title="Verty nolen laben"/>
-                                                                <img  class="lazyload img-2 img-responsive" data-sizes="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="image/demo/shop/product/b9.jpg" alt="Apple Cinema 30" title="Verty nolen laben"/>
-                                                            </a>
-                                                        </div>
 
-                                                    </div>
-                                                    <span class="label label-sale">Sale</span>
-                                                </div>
-                                                <div class="right-block">
-                                                    <div class="caption">
-                                                        <div class="rating">
-                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        </div>
-                                                        <h4>
-                                                            <a href="product.html" title="Verty nolen max.." target="_self">
-                                                                Sende cuisei inges							</a>
-                                                        </h4>
-                                                        <p class="price">
-                                                            <span class="price-new">$145.00</span> <span class="price-old">$169.00</span>
-
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="button-group">
-                                                    <button class="wishlist btn-button" type="button" data-toggle="tooltip" title="Add to Wish List" onclick="wishlist.add('42');"><i class="fa fa-heart"></i></button>
-                                                    <button class="addToCart" type="button" data-toggle="tooltip" title="Add to Cart" onclick="cart.add('42', '1');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs"></span></button>
-                                                    <button class="compare" type="button" data-toggle="tooltip" title="Compare this Product" onclick="compare.add('42');"><i class="fa fa-exchange"></i></button>
-                                                    <a class="quickview iframe-link visible-lg btn-button" data-toggle="tooltip" title="" data-fancybox-type="iframe" href="quickview.html" data-original-title="Quickview"> <i class="fa fa-search"></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php foreach ($lists as $list) : ?>
                                         <div class="ltabs-item ">
                                             <div class="item-inner product-thumb product-item-container transition ">
                                                 <div class="left-block">
