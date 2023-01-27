@@ -37,6 +37,14 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="categories_id">category_id</label>
+                            <select name="categories_id" id="">
+                                <?php foreach ($category as $cat) :?>
+                                    <option value="<?= $cat->id?>"><?= $cat->title ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="Status">Status</label>
                             <br>
                             <select class="custom-select form-control" id="Status" name="status">

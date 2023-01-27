@@ -26,6 +26,9 @@ class Cart extends CI_Controller {
             $id = $this->security->xss_clean($this->input->post('id'));
             $quantity = $this->security->xss_clean($this->input->post('quantity'));
 
+            echo $id;
+            echo $quantity;
+
             $product = $this->product_md->selectDataById($id);
             if(!empty($product)){
                 if(!empty(get_cookie('cart_products'))){

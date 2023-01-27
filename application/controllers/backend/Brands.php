@@ -25,7 +25,7 @@ class Brands extends CI_Controller {
 
         if($this->input->post()){
 
-            $new_name = time().''.rand(1,1000);
+            $new_name = time().''.rand(1,10000);
             $config = [
                 'upload_path' => './uploads/',
                 'allowed_types' => 'gif|jpg|png|jpeg',
@@ -40,14 +40,14 @@ class Brands extends CI_Controller {
             }
             else
             {
-                $brand_file = $this->upload->data('file_name');
+                $image_file = $this->upload->data('file_name');
 //                print_r($brand_file);
                 $request_data = [
                     'title' => $this->security->xss_clean($this->input->post('title')),
                     'status' => $this->security->xss_clean($this->input->post('status')),
                     'created_at' => date("Y-m-d H:i:s"),
                     'updated_at' => date("Y-m-d H:i:s"),
-                    'logo' => $brand_file
+                    'logo' => $image_file
                 ];
                 $insert_id = $this->bd_md->insert($request_data);
                 redirect('backend/brands');

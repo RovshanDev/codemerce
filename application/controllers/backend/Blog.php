@@ -82,11 +82,23 @@ class Blog extends CI_Controller {
         if($this->input->post()){
             $id = $this->security->xss_clean($id);
 
+            $new_name = time() . '' . rand(1, 10000);
+            $config = [
+                'upload_path' => './uploads/',
+                'allowed_types' => 'gif|jpg|png|jpeg',
+                'file_name' => $new_name
+            ];
+
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('image');
+            $image_file = $this->upload->data('file_name');
+
+
             $request_data = [
                 'title' => $this->security->xss_clean($this->input->post('title')),
                 'description' => $this->security->xss_clean($this->input->post('description')),
                 'content' => $this->security->xss_clean($this->input->post('content')),
-//                'image' => $this->security->xss_clean($this->input->file('image')),
+                'image' => $image_file,
 //                'video' => $this->security->xss_clean($this->input->file('video')),
                 'cat_id' => $this->security->xss_clean($this->input->post('cat_id')),
                 'is_monset' => $this->security->xss_clean($this->input->post('is_monset')),

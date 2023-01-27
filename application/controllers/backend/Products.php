@@ -8,6 +8,8 @@ class Products extends CI_Controller {
 
         $this->load->model('Products_model','pr_md');
         $this->load->model('Brands_model','bd_md');
+        $this->load->model('Category_model','cat_md');
+
 
     }
 
@@ -23,6 +25,10 @@ class Products extends CI_Controller {
 
         $data['brands'] = $brands->select_all();
 
+        $category = new Category_model();
+
+        $data['category'] = $category->select_all();
+
         $this->load->admin('products/index',$data);
     }
 
@@ -37,11 +43,24 @@ class Products extends CI_Controller {
                 'price' => $this->security->xss_clean($this->input->post('price')),
                 'brand_id' => $this->security->xss_clean($this->input->post('brand_id')),
                 'status' => $this->security->xss_clean($this->input->post('status')),
-                'created_at' => date("Y-m-d H:i:s")
+                'created_at' => date("Y-m-d H:i:s"),
             ];
             $insert_id = $this->pr_md->insert($request_data);
 
+
+
+//            $datas['product_id'] = $this->pr_md->getLastElementById();
+
             if($insert_id > 0){
+                $datas = [
+                    'product_id' => $insert_id,
+                    'categories_id' => $this->security->xss_clean($this->input->post('categories_id')),
+                    'created_at' => date("Y-m-d H:i:s"),
+                    'updated_at' => date("Y-m-d H:i:s")
+                    ];
+
+                $insert_id_pivot = $this->pr_md->insert_pivot($datas);
+
                 $this->session->set_flashdata('success_message','Məlumat uğurla əlavə edildi');
 
                 redirect('backend/products');
@@ -54,6 +73,11 @@ class Products extends CI_Controller {
         $brands = new Brands_model();
 
         $data['brands'] = $brands->select_all();
+
+        $category = new Category_model();
+
+        $data['category'] = $category->select_all();
+
 
         $this->load->admin('products/create',$data);
 
@@ -102,6 +126,10 @@ class Products extends CI_Controller {
         $brands = new Brands_model();
 
         $data['brands'] = $brands->select_all();
+
+        $category = new Category_model();
+
+        $data['category'] = $category->select_all();
 
         $this->load->admin('products/edit',$data);
 

@@ -40,10 +40,28 @@ class Products_model extends CI_Model {
         return $this->db->insert_id();
     }
 
+    public function insert_pivot($data){
+        $this->db->insert('product_categories', $data);
+
+        return $this->db->insert_id();
+    }
+
+
+
     public function select_all(){
         $query = $this->db->get($this->table);
 
         return $query->result();
+    }
+
+    public function getLastElementById(){
+
+        $this->db->select('p.id');
+        $this->db->from('products p');
+        $this->db->order_by('updated_at', 'DESC');
+        $query = $this->db->get($this->table);
+
+        return $query->row();
     }
 
     public function selectDataById($id){
