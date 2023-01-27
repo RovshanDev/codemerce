@@ -143,68 +143,47 @@
                 <p>Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.</p>
             </div>
             <div class="blog-listitem">
-                <div class="blog-item ">
-                    <div class="itemBlogImg col-md-4 col-sm-12">
-                        <div class="article-image banners">
-                            <div>
-                                <a class="popup-gallery" href="<?=base_url()?>assets/frontend/image/demo/blog/blog4.jpg"><img src="<?=base_url()?>assets/frontend/image/demo/blog/blog4.jpg" alt="Kire tuma demonstraverunt lector"></a>
+                <?php foreach ($lists as $list) {
+                    ?>
+
+                    <div class="blog-item ">
+                        <div class="itemBlogImg col-md-4 col-sm-12">
+                            <div class="article-image banners">
+                                <div>
+                                    <a class="popup-gallery" href="<?=base_url()?>assets/frontend/image/demo/blog/blog4.jpg"><img src="<?=base_url('uploads/').$list->image ?>" title="<?=$list->title?>" alt="<?=$list->title?>"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="itemBlogContent col-md-8 col-sm-12">
-                        <div class="article-title">
-                            <h4>
-                                <a href="<?=base_url('frontend/blog_detail')?>">Kire Tuma Demonstraverunt Lector</a>
-                            </h4>
+                        <div class="itemBlogContent col-md-8 col-sm-12">
+                            <div class="article-title">
+                                <h4>
+                                    <a href="<?=base_url('frontend/blog_detail')?>"><?=$list->description  ?></a>
+                                </h4>
 
-                        </div>
-                        <div class="article-sub-title">
+                            </div>
+                            <div class="article-sub-title">
 								<span class="article-date">
-									<i class="fa fa-calendar"></i>Tue, Feb 16, 2016
+									<i class="fa fa-calendar"></i><?php
+                                    $date=date_create($list->created_at);
+                                    echo date_format($date,"Y/m/d");
+                                    ?>
 								</span>
-                        </div>
-                        <div class="article-description">
-                            Morbi tempus, non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi mollis elit ipsum, a feugiat lectus gravida non. Aenean molestie justo sed aliquam euismod. Maecenas laoreet b								    </div>
-                        <div class="blog-meta">
+                            </div>
+                            <div class="article-description">
+                                <?php $list->content?> </div>
+                            <div class="blog-meta">
 								<span class="comment_count">
 									<a href="#">0 Comments</a>
 								</span>
-                            <span class="author">
+                                <span class="author">
 									<span>Post by </span>Admin
 								</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-item ">
-                    <div class="itemBlogImg col-md-4 col-sm-12">
-                        <div class="article-image banners">
-                            <div>
-                                <a class="popup-gallery" href="<?=base_url()?>assets/frontend/image/demo/blog/blog5.jpg" ><img src="<?=base_url()?>assets/frontend/image/demo/blog/blog5.jpg" alt="Kire tuma demonstraverunt lector"></a>
                             </div>
                         </div>
-
                     </div>
-                    <div class="itemBlogContent col-md-8 col-sm-12">
-                        <div class="article-title">
-                            <h4><a href="<?=base_url('frontend/blog_detail')?>">Ac Tincidunt Suspendisse Malesuada</a></h4>
-                        </div>
-                        <div class="article-sub-title">
-								<span class="article-date">
-									<i class="fa fa-calendar"></i>Tue, Feb 16, 2016
-								</span>
-                        </div>
-                        <div class="article-description">Morbi tempus, non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi mollis elit ipsum, a feugiat lectus gravida non. Aenean molestie justo sed aliquam euismod. Maecenas laoreet b								    </div>
-                        <div class="blog-meta">
-								<span class="comment_count">
-									<a href="#">0 Comments</a>
-								</span>
-                            <span class="author">
-									<span>Post by </span>Admin
-								</span>
-                        </div>
+                <?php }
+                ?>
 
-                    </div>
-                </div>
                 <ul class="pagination">
                     <li class="active"><span>1</span></li>
                     <li><a href="#">2</a></li>

@@ -68,20 +68,20 @@
                             <input type="text" name="country"  placeholder="Country" id="country" class="form-control">
                         </div>
                     </div>
-<!--                    <div class="form-group required">-->
-<!--                        <label class="col-sm-2 control-label" for="input-country">Country</label>-->
-<!--                        <div class="col-sm-10">-->
-<!--                            <select name="country_id" id="input-country" class="form-control">-->
-<!--                                <option value=""> --- Please Select --- </option>-->
-<!--                                <option value="1">Afghanistan</option>-->
-<!--                                <option value="2">Albania</option>-->
-<!--                                <option value="3">Algeria</option>-->
-<!--                                <option value="4">American Samoa</option>-->
-<!--                                <option value="5">Azerbaijan</option>-->
-<!--                                <option value="6">Angola</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="form-group required">-->
+                    <!--                        <label class="col-sm-2 control-label" for="input-country">Country</label>-->
+                    <!--                        <div class="col-sm-10">-->
+                    <!--                            <select name="country_id" id="input-country" class="form-control">-->
+                    <!--                                <option value=""> --- Please Select --- </option>-->
+                    <!--                                <option value="1">Afghanistan</option>-->
+                    <!--                                <option value="2">Albania</option>-->
+                    <!--                                <option value="3">Algeria</option>-->
+                    <!--                                <option value="4">American Samoa</option>-->
+                    <!--                                <option value="5">Azerbaijan</option>-->
+                    <!--                                <option value="6">Angola</option>-->
+                    <!--                            </select>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                 </fieldset>
                 <fieldset>
                     <legend>Your Password</legend>
@@ -95,7 +95,7 @@
                 <div class="buttons">
                     <div class="pull-right">I have read and agree to the <a href="#" class="agree"><b>Pricing Tables</b></a>
                         <input class="box-checkbox" type="checkbox" name="agree" value="1"> &nbsp;
-                        <input type="submit" value="Continue" class="btn btn-primary">
+                        <input type="submit" value="Submit" class="btn btn-primary">
                     </div>
                 </div>
             </form>

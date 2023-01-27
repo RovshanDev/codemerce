@@ -18,11 +18,11 @@
                                 <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
                             </div>
                             <div class="bottom-form">
-                                <a href="#" class="btn btn-default pull-right">Continue</a>
+                                <a href="<?= base_url('frontend/register'); ?>" class="btn btn-default pull-right">Continue</a>
                             </div>
                         </div>
 
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url('frontend/register'); ?>" method="post" enctype="multipart/form-data">
                             <div class="col-sm-6 customer-login">
                                 <div class="well">
                                     <h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Returning Customer</h2>
