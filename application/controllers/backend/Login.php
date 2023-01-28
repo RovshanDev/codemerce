@@ -31,6 +31,10 @@ class Login extends CI_Controller
             $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
             $this->form_validation->set_rules('password', 'Şifrə', 'required');
 
+            if ($this->form_validation->run() == FALSE){
+                $this->load->admin('backend/login');
+            }
+
             $request_data = [
                 'email' => $this->security->xss_clean($this->input->post('email')),
                 'password' => md5($this->input->post('password'))

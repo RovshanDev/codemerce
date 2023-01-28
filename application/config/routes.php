@@ -148,6 +148,7 @@ $route['frontend/compare'] = 'frontend/Compare/index';
 $route['frontend/contact'] = 'frontend/Contact/index';
 $route['frontend/faq'] = 'frontend/Faq/index';
 $route['frontend/login'] = 'frontend/Login/index';
+$route['frontend/logout'] = 'frontend/Login/logout';
 $route['frontend/my_account'] = 'frontend/MyAccount/index';
 $route['frontend/order_history'] = 'frontend/OrderHistory/index';
 $route['frontend/order_information'] = 'frontend/OrderInformation/index';

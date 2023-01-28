@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <form action="<?= base_url('frontend/register'); ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url('frontend/login'); ?>" method="post" enctype="multipart/form-data">
                             <div class="col-sm-6 customer-login">
                                 <div class="well">
                                     <h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Returning Customer</h2>

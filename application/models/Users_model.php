@@ -58,4 +58,12 @@ class Users_model extends CI_Model {
         $this -> db -> delete($this->table);
     }
 
+    public function loggedin($email, $password)
+    {
+        $this->db->where('email', $email);
+        $this->db->where('password', $password);
+        $query = $this->db->get($this->table);
+        return $query->row();
+    }
+
 }

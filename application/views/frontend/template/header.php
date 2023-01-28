@@ -73,8 +73,12 @@
                                 <li class="account" id="my_account">
                                     <a href="<?=base_url('frontend/my_account')?>" title="My Account" class="btn btn-xs dropdown-toggle" data-toggle="dropdown"> <span >My Account</span> <span class="fa fa-angle-down"></span></a>
                                     <ul class="dropdown-menu ">
+                                        <?php if ($this->session->has_userdata('userloggedin')) { ?>
+                                            <li><a href="<?= base_url('logout/'); ?>"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                                        <?php } else { ?>
                                         <li><a href="<?=base_url('frontend/register')?>"><i class="fa fa-user"></i> Register</a></li>
                                         <li><a href="<?=base_url('frontend/login')?>"><i class="fa fa-pencil-square-o"></i> Login</a></li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                                 <li class="wishlist "><a href="<?=base_url('frontend/wishlist')?>" id="wishlist-total" class="top-link-wishlist" title="Wish List (2)"><span>Wish List (2)</span></a></li>
@@ -376,7 +380,11 @@
                             </div>
                             <div class="header_custom_link hidden-xs">
                                 <ul>
-                                    <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
+                                    <?php if ($this->session->has_userdata('userloggedin')) { ?>
+                                    <li><a href="<?=base_url('frontend/logout')?>"><i class="fa fa-user"></i> Logout</a></li>
+                                    <?php } else { ?>
+                                    <li><a href="<?=base_url('frontend/login')?>"><i class="fa fa-user"></i> Login</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>

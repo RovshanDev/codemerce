@@ -6,13 +6,6 @@ function get_settings($key)
     $settings = new Settings_model;
     return $settings->select_data($key);
 }
-function is_logged()
-{
-    $ci = &get_instance();
-    if (empty($ci->session->userdata('loggedin'))) {
-        redirect('backend/login');
-    }
-}
 
 //function get_settings($key)
 //{
