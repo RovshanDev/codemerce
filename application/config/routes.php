@@ -144,6 +144,7 @@ $route['frontend/category'] = 'frontend/Category/indexMain';
 $route['frontend/category/(:any)'] = 'frontend/Category/index/$1';
 $route['frontend/category/(:any)/(:num)'] = 'frontend/Category_product/index/$1/$2';
 $route['frontend/checkout'] = 'frontend/Checkout/index';
+//$route['frontend/checkout/insert'] = 'frontend/Checkout/insert';
 $route['frontend/compare'] = 'frontend/Compare/index';
 $route['frontend/contact'] = 'frontend/Contact/index';
 $route['frontend/faq'] = 'frontend/Faq/index';

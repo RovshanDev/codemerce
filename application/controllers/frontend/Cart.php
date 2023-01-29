@@ -4,9 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Cart extends CI_Controller {
     public function __construct(){
         parent::__construct();
-        $this->load->model('Category_model', 'cat_md');
-        $this->load->model('Products_model', 'product_md');
-        $this->load->model('Images_model', 'img_md');
+            $this->load->model('Category_model', 'cat_md');
+            $this->load->model('Products_model', 'product_md');
+            $this->load->model('Images_model', 'img_md');
     }
 
 
@@ -18,14 +18,8 @@ class Cart extends CI_Controller {
         $data['categories'] = category_tree($data['lists']);
 
         $user_id = $this->session->userdata('user')->id;
-
         $data['carts'] = $this->product_md->join_user_product();
         $data['total'] = $this->product_md->getTotalAmount($user_id);
-
-
-
-
-
 
         $this->load->frontend('cart', $data);
 
