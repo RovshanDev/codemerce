@@ -84,7 +84,7 @@
                                     <div class="option quantity">
                                         <div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
                                             <label>Qty</label>
-                                            <input class="form-control" type="text" name="quantity" id="quantity"
+                                            <input class="form-control" type="text" name="quantity" id ="quantity" data-id="quantity"
                                                    value="1">
                                             <input type="hidden" name="product_id" value="50">
                                             <span class="input-group-addon product_quantity_down">−</span>
@@ -92,7 +92,7 @@
                                         </div>
                                     </div>
                                     <div class="cart">
-                                        <input type="button" data-toggle="tooltip" title="" value="Add to Cart" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" data-id="<?= $product->id?>" data-original-title="Add to Cart">
+                                        <input class="addToCart button-cart" type="button" data-toggle="tooltip" title="" value="Add to Cart" data-loading-text="Loading..."  class="btn btn-mega btn-lg" data-id="<?= $product->id?>" data-original-title="Add to Cart">
                                     </div>
                                     <div class="add-to-links wish_comp">
                                         <ul class="blank list-inline">

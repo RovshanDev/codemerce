@@ -278,9 +278,12 @@
 <script type="text/javascript" src="<?=base_url()?>assets/frontend/js/themejs/cpanel.js"></script>
 
 <script>
-    $("#button-cart").click(function (){
+    $(".button-cart").click(function (){
         let id = $(this).data("id");
-        let quantity = $("#quantity").val();
+        let quantity = 1;
+        if( $('#quantity').length){
+            quantity = $("#quantity").val();
+        }
         $.ajax({
             url: "<?= base_url('frontend/cart/add_to_cart'); ?>",
             data : {

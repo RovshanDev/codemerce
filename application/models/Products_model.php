@@ -25,6 +25,28 @@ class Products_model extends CI_Model {
 
     }
 
+    public function join_user_product(){
+        $this->db->select('i.path as image_path,p.title as product_title,up.*');
+        $this->db->from('user_products up');
+        $this->db->join('users u', 'up.user_id=u.id','left');
+        $this->db->join('products p', 'p.id=up.product_id', 'left');
+        $this->db->join('images i', 'i.product_id=up.product_id', 'left');
+        $this->db->where('i.main',1);
+        $query = $this->db->get()->result();
+
+        return $query;
+
+    }
+
+    public function getTotalAmount($user_id){
+        $this->db->select_sum('up.amount');
+        $this->db->from('user_products up');
+        $this->db->where('user_id',$user_id);
+        $query = $this->db->get()->row();
+
+        return $query;
+
+    }
 
 
     public function insert($data){
@@ -36,6 +58,13 @@ class Products_model extends CI_Model {
         // );
 
         $this->db->insert($this->table, $data);
+
+        return $this->db->insert_id();
+    }
+
+    public function insert_user_products($data){
+
+        $this->db->insert('user_products', $data);
 
         return $this->db->insert_id();
     }

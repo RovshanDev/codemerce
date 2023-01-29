@@ -11,29 +11,8 @@
         <div id="content" class="col-sm-12">
             <h2 class="title">Checkout</h2>
             <div class="row">
+                <?php if (!$this->session->has_userdata('userloggedin')) { ?>
                 <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><i class="fa fa-sign-in"></i> Create an Account or Login</h4>
-                        </div>
-                        <div class="panel-body">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" value="register" name="account">
-                                    Register Account</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" checked="checked" value="guest" name="account">
-                                    Guest Checkout</label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" value="returning" name="account">
-                                    Returning Customer</label>
-                            </div>
-                        </div>
-                    </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title"><i class="fa fa-user"></i> Your Personal Details</h4>
@@ -56,10 +35,6 @@
                                     <label for="input-payment-telephone" class="control-label">Telephone</label>
                                     <input type="text" class="form-control" id="input-payment-telephone" placeholder="Telephone" value="" name="telephone">
                                 </div>
-                                <div class="form-group">
-                                    <label for="input-payment-fax" class="control-label">Fax</label>
-                                    <input type="text" class="form-control" id="input-payment-fax" placeholder="Fax" value="" name="fax">
-                                </div>
                             </fieldset>
                         </div>
                     </div>
@@ -68,79 +43,24 @@
                             <h4 class="panel-title"><i class="fa fa-book"></i> Your Address</h4>
                         </div>
                         <div class="panel-body">
-                            <fieldset id="address" class="required">
+                            <fieldset id="address" >
                                 <div class="form-group">
-                                    <label for="input-payment-company" class="control-label">Company</label>
-                                    <input type="text" class="form-control" id="input-payment-company" placeholder="Company" value="" name="company">
-                                </div>
-                                <div class="form-group required">
-                                    <label for="input-payment-address-1" class="control-label">Address 1</label>
-                                    <input type="text" class="form-control" id="input-payment-address-1" placeholder="Address 1" value="" name="address_1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-payment-address-2" class="control-label">Address 2</label>
-                                    <input type="text" class="form-control" id="input-payment-address-2" placeholder="Address 2" value="" name="address_2">
+                                    <label for="input-payment-address-2" class="control-label">Address</label>
+                                    <input type="text" class="form-control" id="input-payment-address-2" placeholder="Address" value="" name="address">
                                 </div>
                                 <div class="form-group required">
                                     <label for="input-payment-city" class="control-label">City</label>
                                     <input type="text" class="form-control" id="input-payment-city" placeholder="City" value="" name="city">
                                 </div>
                                 <div class="form-group required">
-                                    <label for="input-payment-postcode" class="control-label">Post Code</label>
-                                    <input type="text" class="form-control" id="input-payment-postcode" placeholder="Post Code" value="" name="postcode">
-                                </div>
-                                <div class="form-group required">
                                     <label for="input-payment-country" class="control-label">Country</label>
-                                    <select class="form-control" id="input-payment-country" name="country_id">
-                                        <option value=""> --- Please Select --- </option>
-                                        <option value="244">Aaland Islands</option>
-                                        <option value="1">Afghanistan</option>
-                                        <option value="2">Albania</option>
-                                        <option value="3">Algeria</option>
-                                        <option value="4">American Samoa</option>
-                                        <option value="5">Andorra</option>
-                                        <option value="6">Angola</option>
-                                        <option value="7">Anguilla</option>
-                                        <option value="8">Antarctica</option>
-                                        <option value="9">Antigua and Barbuda</option>
-                                        <option value="10">Argentina</option>
-                                        <option value="11">Armenia</option>
-                                        <option value="12">Aruba</option>
-                                        <option value="252">Ascension Island (British)</option>
-                                        <option value="13">Australia</option>
-                                        <option value="14">Austria</option>
-                                        <option value="15">Azerbaijan</option>
-                                        <option value="16">Bahamas</option>
-                                        <option value="17">Bahrain</option>
-
-                                    </select>
-                                </div>
-                                <div class="form-group required">
-                                    <label for="input-payment-zone" class="control-label">Region / State</label>
-                                    <select class="form-control" id="input-payment-zone" name="zone_id">
-                                        <option value=""> --- Please Select --- </option>
-                                        <option value="3513">Aberdeen</option>
-                                        <option value="3514">Aberdeenshire</option>
-                                        <option value="3515">Anglesey</option>
-                                        <option value="3516">Angus</option>
-                                        <option value="3517">Argyll and Bute</option>
-                                        <option value="3518">Bedfordshire</option>
-                                        <option value="3519">Berkshire</option>
-                                        <option value="3520">Blaenau Gwent</option>
-                                        <option value="3521">Bridgend</option>
-                                        <option value="3522">Bristol</option>
-
-                                    </select>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" checked="checked" value="1" name="shipping_address">
-                                        My delivery and billing addresses are the same.</label>
+                                    <input type="text" name="country"  placeholder="Country" id="country" class="form-control">
                                 </div>
                             </fieldset>
                         </div>
                     </div>
                 </div>
+                <?php }  ?>
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-6">
@@ -150,21 +70,10 @@
                                 </div>
                                 <div class="panel-body">
                                     <p>Please select the preferred shipping method to use on this order.</p>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" checked="checked" name="Free Shipping">
-                                            Free Shipping - $0.00</label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="Flat Shipping Rate">
-                                            Flat Shipping Rate - $8.00</label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="Per Item Shipping Rate">
-                                            Per Item Shipping Rate - $150.00</label>
-                                    </div>
+                                    <?php foreach ($del_methods as $del_method) : ?>
+                                    <input type="radio"  name="delivery_methods" value="<?= $del_method->id ?>">
+                                    <label for="<?= $del_method->title ?>"><?= $del_method->title ?></label><br>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -175,48 +84,10 @@
                                 </div>
                                 <div class="panel-body">
                                     <p>Please select the preferred payment method to use on this order.</p>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" checked="checked" name="Cash On Delivery">Cash On Delivery</label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="Bank Transfer">Bank Transfer</label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="Paypal">Paypal</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><i class="fa fa-ticket"></i> Use Coupon Code</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <label for="input-coupon" class="col-sm-3 control-label">Enter coupon code</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value="" name="coupon">
-                                        <span class="input-group-btn">
-								  <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Apply Coupon">
-								  </span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><i class="fa fa-gift"></i> Use Gift Voucher</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <label for="input-voucher" class="col-sm-3 control-label">Enter gift voucher code</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="input-voucher" placeholder="Enter your gift voucher code here" value="" name="voucher">
-                                        <span class="input-group-btn">
-								  <input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Apply Voucher">
-								  </span> </div>
+                                    <?php foreach ($pay_methods as $pay_method) : ?>
+                                        <input type="radio"  name="payment_methods" value="<?= $pay_method->id ?>">
+                                        <label for="<?= $pay_method->title ?>"><?= $pay_method->title ?></label><br>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +105,7 @@
                                                 <td class="text-left">Product Name</td>
                                                 <td class="text-left">Quantity</td>
                                                 <td class="text-right">Unit Price</td>
-                                                <td class="text-right">Total</td>
+                                                <td class="text-right">AMOUNT</td>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -253,22 +124,6 @@
                                             </tbody>
                                             <tfoot>
                                             <tr>
-                                                <td class="text-right" colspan="4"><strong>Sub-Total:</strong></td>
-                                                <td class="text-right">$750.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right" colspan="4"><strong>Flat Shipping Rate:</strong></td>
-                                                <td class="text-right">$5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right" colspan="4"><strong>Eco Tax (-2.00):</strong></td>
-                                                <td class="text-right">$4.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right" colspan="4"><strong>VAT (20%):</strong></td>
-                                                <td class="text-right">$151.00</td>
-                                            </tr>
-                                            <tr>
                                                 <td class="text-right" colspan="4"><strong>Total:</strong></td>
                                                 <td class="text-right">$910.00</td>
                                             </tr>
@@ -280,18 +135,9 @@
                         </div>
                         <div class="col-sm-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><i class="fa fa-pencil"></i> Add Comments About Your Order</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <textarea rows="4" class="form-control" id="confirm_comment" name="comments"></textarea>
-                                    <br>
-                                    <label class="control-label" for="confirm_agree">
-                                        <input type="checkbox" checked="checked" value="1" required="" class="validate required" id="confirm_agree" name="confirm agree">
-                                        <span>I have read and agree to the <a class="agree" href="#"><b>Terms &amp; Conditions</b></a></span> </label>
                                     <div class="buttons">
                                         <div class="pull-right">
-                                            <input type="button" class="btn btn-primary" id="button-confirm" value="Confirm Order">
+                                            <input type="button" class="btn btn-primary" id="button-confirm" value="ConfirmOrder">
                                         </div>
                                     </div>
                                 </div>

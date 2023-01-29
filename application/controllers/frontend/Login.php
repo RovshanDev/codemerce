@@ -44,7 +44,7 @@ class Login extends CI_Controller {
                 redirect('frontend');
             } else {
                 $this->session->set_flashdata('error_message', 'Error');
-                redirect('frontend/login');
+//                redirect('frontend/login');
             }
         }
         $this->load->frontend('login', $data);
